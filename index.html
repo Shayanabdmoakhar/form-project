@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Form</title>
+</head>
+<body>
+    <div class="container">
+        <article id="order-form">
+            <h1 class="page-title">Order Form</h1>
+            <p>Please fill in the form below. Payment is made at the time of delivery or pick up</p>
+            <form id="get-order" action="" method="post">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="firstname" placeholder="First Name" required>
+                    
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="lastname" placeholder="Last Name" required>
+                
+                    <label for="email">Email Address:</label>
+                    <input id="email" type="email" name="email" placeholder="Email">
+                
+                    <label for="contact">Phone Number:</label>
+                    <input type="text" name="phone-number" id="contact" placeholder="Phone Number">
+                <div>
+                    <h2>Delivery Details</h2>
+                    <br>
+                    <label for="delivery"><strong>Via:</strong></label>
+                    <select name="delivery-method" id="delivery">
+                        <option value="Curbside-Pickup" checked="checked">Curbside Pickup</option>
+                        <option value="Pickup-In-Store">Store Pickup</option>
+                        <option value="Courier-Delivery">Deliver Via Courier ($25 Charge)</option>
+                    </select>
+                </div>
+                <div>
+                    <h2>Order Items</h2>
+                    <br>
+                    <input type="checkbox"> 
+                    <label for="select">Macarons($1 each)</label>
+                    <select name="select" id="macarons">
+                        <option value="assorted">Assorted</option>
+                        <option value="medium">Medium</option>
+                        <option value="larger">Large</option>
+                    </select>
+                    <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+                    <br>
+                    <input type="checkbox"> 
+                    <label for="doughnuts">Doughnuts($2 each)</label>
+                    <select name="select2" id="doughnuts">
+                        <option value="assorted">Assorted</option>
+                        <option value="medium">Medium</option>
+                        <option value="larger">Large</option>
+                    </select>
+                    <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+                    <br>
+                    <input type="checkbox"> 
+                    <label for="croissants">Croissants($2 each)</label>
+                    <select name="select3" id="croissants">
+                        <option value="assorted">Traditional</option>
+                        <option value="medium">Medium</option>
+                        <option value="larger">Large</option>
+                    </select>
+                    <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+                    <br>
+                    <input type="checkbox"> 
+                    <label for="pie">Pies($10 each)</label>
+                    <select name="select3" id="pie">
+                        <option value="Apple">Apple</option>
+                        <option value="Blueberry">Blueberry Pie</option>
+                        <option value="chockolate">chocolate Pie</option>
+                    </select>
+                    <input type="number" class="quantity" name="quantity" placeholder="0" min="1" max="3">
+                    <br>
+                    <input type="checkbox"> 
+                    <label for="cake">8' Cakes($25 each)</label>
+                    <select name="select3" id="pie">
+                        <option value="Apple">Lemon</option>
+                        <option value="Blueberry">Strawberry Cake</option>
+                        <option value="chocolate">Chocolate Cake</option>
+                    </select>
+                    <input type="number" class="quantity" name="quantity" placeholder="0" min="1" max="3" >
+                </div>  
+                <div>
+                    <h2>Order Instructions</h2>
+                    <br>
+                    <h5>If you have a preference for any of the above ordered items, please specify below</h5>
+                    <textarea name="order-inst" id="instruction" cols="60" rows="5" placeholder="Enter Comments Here"></textarea>
+                </div>
+                <div>
+                    <h4>Payment Type</h4>
+                    <br>
+                    <input type="radio" name="payment" id="debit" value="debit">
+                    <label for="debit">Debit</label>
+
+                    <input type="radio" name="payment" id="cash" value="cash">
+                    <label for="cash">Cash</label>
+
+                    <input type="radio" name="payment" id="master-card" value="master/visa">
+                    <label for="master-card">Visa/Mastercard</label>
+                </div>
+
+                <div>
+                    <button class="order-button">Place Order Now</button>
+                </div>
+            </form>
+        </article>
+    </div>
+</body>
+</html>
